@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 md_yaml_converter.py
 
@@ -26,6 +25,13 @@ from log_setup import setup_logging, ContextualLoggerAdapter, set_log_context, l
 
 logger = setup_logging(name="md_yaml_converter", to_console=True, to_file=False, level="DEBUG", mode="verbose")
 logger = ContextualLoggerAdapter(logger)
+set_log_context(user_id="-", session_id="-", request_id="-")
+
+# Force PyYAML to quote all strings to avoid folded style wrapping
+def quoted_scalar_representer(dumper, data):
+    return dumper.represent_scalar('tag:yaml.org,2002:str', data, style='"')
+
+yaml.add_representer(str, quoted_scalar_representer)
 
 def validate_markdown_table(lines: List[str]) -> bool:
     """Validate the structure of a Markdown table, checking header consistency with each row."""
@@ -41,7 +47,7 @@ def validate_markdown_table(lines: List[str]) -> bool:
     return True
 
 def markdown_to_yaml(md_path: str, output_path: str, output_format: str, dry_run: bool = False) -> None:
-    """Convert a Markdown table to YAML or JSON format.
+    """Convert a Markdown table to YAML or JSON format, nested under a top-level key based on file name.
 
     Args:
         md_path (str): Path to the input Markdown file.
@@ -69,13 +75,16 @@ def markdown_to_yaml(md_path: str, output_path: str, output_format: str, dry_run
             logger.info(f"Dry run: parsed {len(records)} records. Nothing written.")
             return
 
+        top_key = os.path.splitext(os.path.basename(md_path))[0]
+        nested_output = {top_key: records}
+
         with open(output_path, 'w', encoding='utf-8') as f:
             if output_format == 'yaml':
-                yaml.dump(records, f, sort_keys=False, allow_unicode=True)
+                yaml.dump(nested_output, f, sort_keys=False, allow_unicode=True)
             elif output_format == 'json':
-                json.dump(records, f, indent=2, ensure_ascii=False)
+                json.dump(nested_output, f, indent=2, ensure_ascii=False)
 
-        logger.info(f"✅ Wrote {len(records)} records to {output_path}")
+        logger.info(f"✅ Wrote {len(records)} records to {output_path} under top-level key '{top_key}'")
     except Exception as exc:
         log_exception(logger, "Failed Markdown to YAML/JSON conversion.")
         raise exc
@@ -90,7 +99,7 @@ def parse_markdown_field(value: str):
         Union[str, list]: Parsed value.
     """
     if value.startswith('- '):
-        return [line.lstrip('- ').strip() for line in value.split('\\n') if line.strip()]
+        return [line.lstrip('- ').strip() for line in value.split('\n') if line.strip()]
     return value
 
 def yaml_to_markdown(input_path: str, output_path: str, dry_run: bool = False) -> None:
@@ -104,7 +113,13 @@ def yaml_to_markdown(input_path: str, output_path: str, dry_run: bool = False) -
     logger.info(f"Converting YAML to Markdown: {input_path} -> {output_path}")
     try:
         with open(input_path, 'r', encoding='utf-8') as f:
-            records = yaml.safe_load(f)
+            content = yaml.safe_load(f)
+
+        # If content is nested under a single key, flatten it
+        if isinstance(content, dict) and len(content) == 1:
+            records = list(content.values())[0]
+        else:
+            records = content
 
         if not records:
             logger.warning("YAML file is empty or malformed.")
@@ -138,7 +153,7 @@ def format_markdown_cell(value) -> str:
         str: Markdown-safe cell content.
     """
     if isinstance(value, list):
-        return '\\n'.join(f"- {v}" for v in value)
+        return '\n'.join(f"- {v}" for v in value)
     return str(value)
 
 def detect_mode(file_path: str) -> str:
