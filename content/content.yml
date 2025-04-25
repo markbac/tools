@@ -71,19 +71,19 @@ blogs:
       - Introduction
         - Why a layered model? (Abstraction, modularity)
         - TCP/IP vs. OSI model (brief comparison)
-      - Layer 4: Application Layer
+      - Layer 4 - Application Layer
         - Description (end-user applications)
         - Protocols (HTTP, FTP, SMTP, DNS)
         - Real-world examples (web browsing, email)
-      - Layer 3: Transport Layer
+      - Layer 4 -  Transport Layer
         - Description (end-to-end communication)
         - Protocols (TCP, UDP)
         - Reliability vs. speed trade-off
-      - Layer 2: Internet Layer
+      - Layer 2 - Internet Layer
         - Description (logical addressing and routing)
         - Protocol (IP)
         - How data packets move across networks
-      - Layer 1: Network Access Layer
+      - Layer 1 - Network Access Layer
         - Description (physical connection to network)
         - Technologies (Ethernet, Wi-Fi)
         - MAC addresses
@@ -363,7 +363,7 @@ blogs:
         - Protocol, Description, Port, Use Case
       - Conclusion
         - Essential application protocols
-- Title: "SSL/TLS: The Technology Behind HTTPS"
+  - Title: "SSL/TLSLS - The Technology Behind HTTPS"
     Short Description: "Public/private keys, certificates, CAs, and secure sessions."
     Synopsis: "Demystifies how SSL/TLS provides secure communications over the web. It walks through certificate chains, how HTTPS works, and common issues like expired certificates. Practical tips on checking and managing SSL for websites are included."
     Tags: "ssl, tls, https, encryption, certificates"
@@ -513,7 +513,7 @@ blogs:
         - Guest networks
         - IoT device isolation
         - Network segmentation for security
-        - Example: Using VLANs on an Asus router
+        - Example - Using VLANs on an Asus router
       - Benefits of VLANs
         - Security
         - Performance
@@ -711,7 +711,7 @@ blogs:
         - Network segmentation (VLANs)
         - Strong authentication
         - Regular updates
-        - Example: Securing IoT devices on a Home Assistant network
+        - Example - Securing IoT devices on a Home Assistant network
       - Conclusion
         - Navigating the complexities of IoT networking
 
@@ -757,7 +757,7 @@ blogs:
         - Isolating IoT devices
         - Creating guest networks
         - Segmenting cameras and other sensitive devices
-        - Example: VLAN configuration on an Asus router for a smart home
+        - Example - VLAN configuration on an Asus router for a smart home
       - Subnetting for Smart Home Security
         - Further segmentation within VLANs
         - IP address management
@@ -777,7 +777,7 @@ blogs:
       - Conclusion
         - Enhancing smart home security through network segmentation
 
-- Title: "Running a Local DNS and DHCP Server for Your Home Lab"
+  - Title: "Running a Local DNS and DHCP Server for Your Home Lab"
     Short Description: "Dnsmasq or Pi-hole as authoritative source, benefits of full control."
     Synopsis: "Shows how and why to run your own DNS/DHCP for a home lab or advanced home setup. Explains the tools, benefits like faster lookups, and additional features like conditional forwarding."
     Tags: "dns, dhcp, home lab, pi-hole"
