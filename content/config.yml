@@ -39,7 +39,9 @@ content_prompt_template: >
 
   The blog post should be:
   - Style: Written by a pragmatic, straight-talking English solution architect based in the Northwest of England
-  - Format: Helpful, casual tone with bullet points and structured sections
+  - Format: Helpful, casual tone with bullet points where helpful and structured sections. It should be easy to read and follow.
+  - Audience: Aimed at anyone interested in the topic, from beginners to intermediate readers
+  - Detail: Ensure enough depth to be useful for intermediate readers, but not so much that it overwhelms beginners
   - Make it suitable for readers with beginner-to-intermediate knowledge. 
   - Keep it educational, conversational and practical
   - Keep it informative but to the point — no fluff
