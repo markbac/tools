@@ -25,6 +25,7 @@ import argparse
 from pathlib import Path
 from openai import OpenAI
 from log_setup import setup_logging, ContextualLoggerAdapter
+from openai import AuthenticationError, APIError, RateLimitError, Timeout
 
 
 def load_config(config_path):
@@ -67,9 +68,9 @@ def insert_diagram_placeholder(content, placeholder_text):
     return content
 
 
-def generate_post(title, synopsis, reading_time, config, memory_messages, logger):
+def generate_post(title, synopsis, reading_time, config, memory_messages, logger,memory_enabled):
     prompt = config["content_prompt_template"].format(title=title, synopsis=synopsis)
-    messages = memory_messages[:] if memory_messages else []
+    messages = memory_messages[:] if memory_enabled else []
     messages.insert(0, {"role": "system", "content": config["system_prompt"]})
     messages.append({"role": "user", "content": prompt})
 
@@ -78,12 +79,28 @@ def generate_post(title, synopsis, reading_time, config, memory_messages, logger
     logger.debug(f"📤 Prompt: {prompt}")
 
     client = OpenAI(api_key=config["api_key"])
-    response = client.chat.completions.create(
-        model=config["model"],
-        temperature=config["temperature"],
-        max_tokens=max_tokens,
-        messages=messages
-    )
+    try:
+        response = client.chat.completions.create(
+            model=config["model"],
+            temperature=config["temperature"],
+            max_tokens=max_tokens,
+            messages=messages
+        )
+    except AuthenticationError as e:
+        logger.error("❌ OpenAI Authentication failed. Check your API key.")
+        logger.debug(f"Auth error details: {str(e)}")
+        raise SystemExit(1)
+    except RateLimitError as e:
+        logger.error("⚠️ Rate limit or quota exceeded.")
+        logger.info("🔁 Try again later or review your plan at https://platform.openai.com/account/usage")
+        logger.debug(f"Quota details: {e}")
+        raise SystemExit(1)
+    except Timeout:
+        logger.error("⏱️ Request timed out.")
+        raise
+    except APIError as e:
+        logger.error(f"❌ OpenAI API error: {str(e)}")
+        raise
 
     result = response.choices[0].message.content.strip()
     logger.debug(f"📥 Response for '{title}': {result[:300]}...")
@@ -100,6 +117,8 @@ def main():
     parser.add_argument("--temperature", type=float, help="Override temperature.")
     parser.add_argument("--max-tokens", type=int, help="Override max tokens.")
     parser.add_argument("--tokens-per-minute", type=int, help="Override tokens per minute.")
+    parser.add_argument("--memory", dest="enable_memory", action="store_true", help="Enable memory between posts")
+    parser.add_argument("--no-memory", dest="enable_memory", action="store_false", help="Disable memory between posts")
     args = parser.parse_args()
 
     config = load_config(args.config)
@@ -108,6 +127,8 @@ def main():
     config["default_max_tokens"] = args.max_tokens if args.max_tokens is not None else config.get("default_max_tokens", 1500)
     config["tokens_per_minute"] = args.tokens_per_minute if args.tokens_per_minute is not None else config.get("tokens_per_minute", 225)
     config["api_key"] = config.get("api_key") or os.getenv("OPENAI_API_KEY")
+    memory_enabled = args.enable_memory if args.enable_memory is not None else config.get("enable_memory", False)
+
     if not config["api_key"]:
         raise ValueError("API key not found in config or environment.")
 
@@ -118,32 +139,42 @@ def main():
     logger = ContextualLoggerAdapter(logger)
     logger.info("🚀 Starting blog post generation")
 
-    with open(args.input, "r", encoding="utf-8") as f:
+    input_path = Path(args.input)
+    if not input_path.exists():
+        logger.error(f"❌ Input file not found: {input_path.resolve()}")
+        logger.info("📄 Please provide a valid YAML input file using --input path/to/file.yml")
+        return  # Graceful exit
+
+    with open(input_path, "r", encoding="utf-8") as f:
         blog_data = yaml.safe_load(f)
+
 
     memory_messages = []
 
-    for category, posts in blog_data.items():
-        for post in posts:
-            title = post.get("Title")
-            synopsis = post.get("Synopsis", "")
-            reading_time = post.get("Estimated Reading Time", 6)
-            diagram_note = post.get("Suggested Diagram/Image", "")
-            slug = title.lower().replace(" ", "_").replace("?", "").replace("'", "")
+    try:
+        for category, posts in blog_data.items():
+            for post in posts:
+                title = post.get("Title")
+                synopsis = post.get("Synopsis", "")
+                reading_time = post.get("Estimated Reading Time", 6)
+                diagram_note = post.get("Suggested Diagram/Image", "")
+                slug = title.lower().replace(" ", "_").replace("?", "").replace("'", "")
 
-            try:
-                article = generate_post(title, synopsis, reading_time, config, memory_messages, logger)
-                front_matter = create_front_matter(post)
-                article_with_diagram = insert_diagram_placeholder(article, diagram_note)
+                try:
+                    article = generate_post(title, synopsis, reading_time, config, memory_messages, logger, memory_enabled)
+                    front_matter = create_front_matter(post)
+                    article_with_diagram = insert_diagram_placeholder(article, diagram_note)
 
-                output_path = output_dir / f"{slug}.md"
-                with open(output_path, "w", encoding="utf-8") as out_file:
-                    out_file.write(front_matter + article_with_diagram)
-                logger.info(f"✅ Saved: {output_path}")
-            except Exception as e:
-                logger.exception(f"❌ Error generating post for '{title}': {e}")
+                    output_path = output_dir / f"{slug}.md"
+                    with open(output_path, "w", encoding="utf-8") as out_file:
+                        out_file.write(front_matter + article_with_diagram)
+                    logger.info(f"✅ Saved: {output_path}")
+                except Exception as e:
+                    logger.exception(f"❌ Error generating post for '{title}': {e}")
+        logger.info("🏁 All blog content generated.")
 
-    logger.info("🏁 All blog content generated.")
+    except SystemExit:
+        logger.warning("🛑 Script terminated due to critical error.")
 
 
 if __name__ == "__main__":
