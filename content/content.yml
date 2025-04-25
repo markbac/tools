@@ -1,1 +1,1015 @@
 
+blogs:
+  - Title: "What Is a Network? (LAN, WAN, PAN Explained Simply)"
+    Short Description: "Set the stage with everyday examples (home LAN, office WAN, Bluetooth PAN)."
+    Synopsis: "This post introduces the basic concept of networks using relatable scenarios. It explains the differences between LAN, WAN, and PAN, with real-world use cases like home internet, office networks, and Bluetooth devices. The goal is to ground the reader in what networks are and why they matter."
+    Tags: "networking, beginner, lan, wan, pan"
+    Estimated Reading Time: "5 min"
+    Suggested Diagram/Image: "Diagram showing LAN vs WAN vs PAN with device examples"
+    Structure:
+      - Introduction
+        - What is a network? (Layman's terms)
+        - Why are networks important in daily life?
+      - LAN (Local Area Network)
+        - Definition and characteristics
+        - Home network examples (devices, router)
+        - Small office LAN scenarios
+      - WAN (Wide Area Network)
+        - Definition and scale
+        - Internet as the largest WAN
+        - Connecting remote offices
+      - PAN (Personal Area Network)
+        - Definition and short-range focus
+        - Bluetooth examples (headphones, keyboards)
+        - Wi-Fi Direct
+      - Comparison Table (LAN, WAN, PAN)
+        - Key differences (size, speed, cost)
+        - Simple visual table
+      - Conclusion
+        - Recap of network types
+        - Importance of understanding networks
+
+  - Title: "Network Topologies: Star, Bus, Mesh and More"
+    Short Description: "Visualise how networks physically and logically connect."
+    Synopsis: "This article explores different network topologies, such as star, bus, and mesh. It breaks down the pros and cons of each, where they're commonly used, and their impact on reliability and performance. A great primer before diving into how data actually moves through these structures."
+    Tags: "networking, topology, mesh, star, bus"
+    Estimated Reading Time: "6 min"
+    Suggested Diagram/Image: "Diagrams of each topology type"
+    Structure:
+      - Introduction
+        - What is network topology? (Physical and logical)
+        - Why topology matters (performance, reliability)
+      - Star Topology
+        - Description (central hub/switch)
+        - Pros (easy management, fault isolation)
+        - Cons (single point of failure)
+        - Use cases (home networks, office LANs)
+      - Bus Topology
+        - Description (single backbone cable)
+        - Pros (simple, cheap)
+        - Cons (scalability limits, fault vulnerability)
+        - Historical use cases
+      - Mesh Topology
+        - Description (every node connects to every other)
+        - Pros (high redundancy, reliability)
+        - Cons (complex, expensive)
+        - Use cases (critical systems, some wireless setups)
+      - Other Topologies (briefly)
+        - Ring, Hybrid, Tree
+      - Comparison Table
+        - Topology vs. Pros/Cons
+      - Conclusion
+        - Choosing the right topology
+
+  - Title: "Understanding the 4-Layer TCP/IP Model"
+    Short Description: "Break down Application, Transport, Internet, and Network Access layers."
+    Synopsis: "This post demystifies the 4-layer model that underpins modern networking. Each layer is explained with examples of protocols and real-world applications, using metaphors and visuals to keep it grounded and digestible. Essential foundation for understanding more advanced network behaviour."
+    Tags: "tcp/ip, osi, layers, networking"
+    Estimated Reading Time: "7 min"
+    Suggested Diagram/Image": "Layered diagram with protocol examples at each layer"
+    Structure:
+      - Introduction
+        - Why a layered model? (Abstraction, modularity)
+        - TCP/IP vs. OSI model (brief comparison)
+      - Layer 4: Application Layer
+        - Description (end-user applications)
+        - Protocols (HTTP, FTP, SMTP, DNS)
+        - Real-world examples (web browsing, email)
+      - Layer 3: Transport Layer
+        - Description (end-to-end communication)
+        - Protocols (TCP, UDP)
+        - Reliability vs. speed trade-off
+      - Layer 2: Internet Layer
+        - Description (logical addressing and routing)
+        - Protocol (IP)
+        - How data packets move across networks
+      - Layer 1: Network Access Layer
+        - Description (physical connection to network)
+        - Technologies (Ethernet, Wi-Fi)
+        - MAC addresses
+      - Layer Interaction
+        - How layers communicate with each other
+        - Encapsulation and de-encapsulation
+      - Conclusion
+        - Importance of the TCP/IP model
+        - Foundation for further learning
+
+  - Title: "Switches and Routers: What’s the Difference and Why It Matters"
+    Short Description: "MACs, switching, routing, and NAT introduction."
+    Synopsis: "Here we define what switches and routers are, how they differ, and why they matter in your home or enterprise network. We explore how switches use MAC addresses to forward data and how routers manage traffic between networks using IPs. NAT and basic routing are introduced."
+    Tags: "routers, switches, nat, lan"
+    Estimated Reading Time: "6 min"
+    Suggested Diagram/Image": "Diagram comparing Layer 2 switching and Layer 3 routing"
+    Structure:
+      - Introduction
+        - Basic networking devices
+        - Importance of switches and routers
+      - Switches
+        - Definition and function (Layer 2)
+        - MAC addresses and forwarding
+        - LAN operations
+        - Managed vs. unmanaged switches
+      - Routers
+        - Definition and function (Layer 3)
+        - IP addresses and routing
+        - Connecting different networks (LANs, WANs)
+        - Home router functions
+      - Key Differences
+        - Layer 2 vs. Layer 3
+        - MAC vs. IP addressing
+        - LAN vs. WAN focus
+      - NAT (Network Address Translation)
+        - Why NAT is needed
+        - Basic explanation
+      - Conclusion
+        - When to use switches and routers
+        - Their essential roles in networks
+
+  - Title: "Wired vs Wireless: Ethernet and Wi-Fi Compared"
+    Short Description: "Cover cabling standards (Cat5e/6), speeds, interference, range, and mesh Wi-Fi."
+    Synopsis: "A comparison of Ethernet and Wi-Fi, including use-cases, pros and cons, and when to choose one over the other. It covers cabling standards, signal interference, and introduces concepts like Wi-Fi mesh networking. Ideal for home users deciding how to set up their networks."
+    Tags: "ethernet, wifi, cabling, wireless"
+    Estimated Reading Time: "6 min"
+    Suggested Diagram/Image": "Side-by-side comparison table, signal coverage diagrams"
+    Structure:
+      - Introduction
+        - Importance of network connectivity
+        - Wired (Ethernet) and Wireless (Wi-Fi) overview
+      - Ethernet
+        - Cabling standards (Cat5e, Cat6, etc.)
+        - Speeds and bandwidth
+        - Reliability and stability
+        - Use cases (desktops, servers)
+      - Wi-Fi
+        - Wi-Fi standards (802.11 a/b/g/n/ac/ax)
+        - Frequency bands (2.4 GHz, 5 GHz)
+        - Range and obstacles
+        - Interference and security
+        - Wi-Fi Mesh networks
+      - Comparison
+        - Speed, reliability, cost, mobility
+        - Table format for easy comparison
+      - Choosing the Right Technology
+        - Home vs. office scenarios
+        - Hybrid approaches
+      - Conclusion
+        - The evolving landscape of connectivity
+
+  - Title: "IP Addresses and Subnetting Demystified"
+    Short Description: "IP classes, CIDR, why subnetting matters (without diving too deeply into binary maths)."
+    Synopsis: "This article breaks down the often-intimidating subject of IP addresses and subnetting. It uses analogies and diagrams to explain how IPs are structured, how subnets work, and why they matter in network planning. Includes simple CIDR examples for clarity."
+    Tags: "ip, subnetting, networking, cidr"
+    Estimated Reading Time: "7 min"
+    Suggested Diagram/Image": "Subnetting table examples, IP range diagrams"
+    Structure:
+      - Introduction
+        - What is an IP address? (Logical addressing)
+        - Why are IP addresses necessary?
+      - IP Address Structure
+        - IPv4 vs. IPv6 (briefly)
+        - Octets and dotted decimal notation
+        - Network and host portions
+      - IP Address Classes (A, B, C)
+        - Default subnet masks
+        - Range of addresses
+        - Historical context
+      - Subnetting
+        - Why subnetting? (Efficiency, security)
+        - Subnet mask explained
+        - Creating subnets (simple examples)
+      - CIDR (Classless Inter-Domain Routing)
+        - CIDR notation (/8, /16, /24)
+        - Benefits of CIDR (flexibility)
+      - Practical Applications
+        - Home network subnetting
+        - Enterprise network examples
+      - Conclusion
+        - Importance of IP addressing and subnetting
+        - Foundation for network management
+
+  - Title: "MAC Addresses and ARP: Finding Devices on a Network"
+    Short Description: "ARP tables, spoofing basics, MAC filtering."
+    Synopsis: "Focuses on how MAC addresses identify devices and how ARP resolves IP to MAC. Introduces basic Layer 2 networking and the concept of spoofing. Ties into switch functionality and potential network attacks like ARP spoofing."
+    Tags: "mac, arp, spoofing, layer2"
+    Estimated Reading Time: "6 min"
+    Suggested Diagram/Image": "ARP resolution process diagram"
+    Structure:
+      - Introduction
+        - MAC address definition (physical address)
+        - Uniqueness and purpose
+      - MAC Address Structure
+        - 48-bit address
+        - OUI (Organizationally Unique Identifier)
+      - ARP (Address Resolution Protocol)
+        - Why ARP is needed (IP to MAC resolution)
+        - ARP request and reply process
+        - ARP tables
+      - Layer 2 Networking
+        - Switches and MAC address forwarding
+        - Broadcast domains
+      - ARP Spoofing
+        - What is ARP spoofing?
+        - Potential consequences
+        - Basic mitigation techniques
+      - MAC Filtering
+        - How MAC filtering works
+        - Limitations and security considerations
+      - Conclusion
+        - Importance of MAC addresses and ARP
+        - Security awareness
+
+  - Title: "How Devices Join the Network: DHCP Explained"
+    Short Description: "Leases, reservations, static vs dynamic IPs."
+    Synopsis: "A detailed look at how DHCP works to assign IP addresses. Explains what leases are, how reservations function, and how static IPs differ. This is foundational for understanding network configuration."
+    Tags: "dhcp, ip assignment, networking"
+    Estimated Reading Time: "5 min"
+    Suggested Diagram/Image": "DHCP request flow diagram"
+    Structure:
+      - Introduction
+        - Manual vs. automatic IP configuration
+        - Benefits of DHCP
+      - DHCP Process
+        - DHCP Discover, Offer, Request, ACK
+        - DHCP server and client interaction
+        - Diagram of the process
+      - DHCP Leases
+        - What are leases?
+        - Lease duration and renewal
+      - DHCP Reservations
+        - Assigning specific IPs to devices
+        - Use cases (servers, printers)
+      - Static vs. Dynamic IPs
+        - Differences and use cases
+        - When to use each
+      - DHCP Options
+        - Gateway, DNS server configuration
+      - Conclusion
+        - Importance of DHCP in network management
+
+  - Title: "NAT and Port Forwarding: Talking to the Outside World"
+    Short Description: "Practical home examples, double NAT, port mapping in routers."
+    Synopsis: "Explains the concepts of Network Address Translation (NAT) and port forwarding using real-world home networking setups. It clarifies how internal devices access the internet and how incoming traffic is routed correctly. Covers issues like double NAT and gaming/router compatibility."
+    Tags: "nat, port forwarding, internet access"
+    Estimated Reading Time: "6 min"
+    Suggested Diagram/Image": "Diagram showing NAT and port mapping flow"
+    Structure:
+      - Introduction
+        - The need for NAT
+        - Public vs. private IP addresses
+      - NAT (Network Address Translation)
+        - How NAT works
+        - Hiding internal IPs
+        - Benefits of NAT (security, IP conservation)
+      - Port Forwarding
+        - Allowing external access to internal services
+        - Port numbers and their purpose
+        - Configuring port forwarding on a router
+      - Home Networking Examples
+        - Web server hosting
+        - Game server setup
+        - Remote access to devices
+      - Double NAT
+        - What is double NAT?
+        - Issues and solutions
+      - Conclusion
+        - Importance of NAT and port forwarding
+        - Security considerations
+
+  - Title: "TCP vs UDP: Choosing the Right Transport Protocol"
+    Short Description: "Packet delivery, streaming vs reliability, connection overhead."
+    Synopsis: "Compares TCP and UDP, detailing how each protocol handles data transmission. Describes scenarios where each is preferable, such as TCP for file transfers and UDP for streaming or gaming. Includes packet structure and connection flow visuals."
+    Tags: "tcp, udp, transport layer, networking"
+    Estimated Reading Time: "6 min"
+    Suggested Diagram/Image": "Side-by-side comparison table of TCP vs UDP"
+    Structure:
+      - Introduction
+        - Transport layer protocols
+        - Importance of TCP and UDP
+      - TCP (Transmission Control Protocol)
+        - Connection-oriented
+        - Reliable data transfer
+        - Sequencing and flow control
+        - Overhead and acknowledgments
+        - Use cases (web browsing, email, file transfer)
+      - UDP (User Datagram Protocol)
+        - Connectionless
+        - Unreliable data transfer
+        - Low overhead and speed
+        - Use cases (streaming, gaming, VoIP)
+      - Comparison
+        - Reliability vs. speed
+        - Overhead differences
+        - When to use each protocol
+        - Table for clear comparison
+      - Conclusion
+        - Choosing the right protocol for the application
+
+  - Title: "DNS: The Internet's Directory Service"
+    Short Description: "Query path, caching, DNSSEC, DNS over HTTPS/TLS, use cases like Pi-hole."
+    Synopsis: "Provides a comprehensive look at how DNS works, including query resolution, caching, and modern security enhancements like DNSSEC and DoH. Practical uses like ad-blocking via Pi-hole are included to anchor theory in reality."
+    Tags: "dns, doh, dnssec, networking"
+    Estimated Reading Time: "6 min"
+    Suggested Diagram/Image": "DNS query flow diagram"
+    Structure:
+      - Introduction
+        - What is DNS? (Domain Name System)
+        - Analogy to a phonebook
+      - DNS Query Process
+        - Recursive vs. iterative queries
+        - DNS resolvers and servers
+        - Root servers, TLD servers, authoritative servers
+        - Diagram of the query flow
+      - DNS Caching
+        - Benefits of caching (speed, reduced load)
+        - TTL (Time to Live)
+      - DNS Security
+        - DNSSEC (DNS Security Extensions)
+        - DoH (DNS over HTTPS)
+        - DoT (DNS over TLS)
+      - Practical Applications
+        - Home network DNS settings
+        - Pi-hole for ad-blocking
+      - Conclusion
+        - Importance of DNS for internet functionality
+
+  - Title: "Common Application Protocols: HTTP, HTTPS, FTP, SMTP, IMAP"
+    Short Description: "Real-world uses, secure vs insecure variants, default ports."
+    Synopsis: "Overviews popular application-layer protocols, explaining what they do and where they are used. The post touches on security considerations and includes a summary table of default ports and functions."
+    Tags: "http, ftp, smtp, imap, application layer"
+    Estimated Reading Time: "7 min"
+    Suggested Diagram/Image": "Protocol table with port numbers and usage scenarios"
+    Structure:
+      - Introduction
+        - Application layer protocols
+        - How they interact with users
+      - HTTP (Hypertext Transfer Protocol)
+        - Web browsing
+        - Client-server model
+        - Stateless nature
+      - HTTPS (HTTP Secure)
+        - Encryption and security
+        - SSL/TLS
+        - Importance for sensitive data
+      - FTP (File Transfer Protocol)
+        - File transfer between systems
+        - Separate control and data connections
+      - SMTP (Simple Mail Transfer Protocol)
+        - Sending email messages
+        - Mail servers and relaying
+      - IMAP (Internet Message Access Protocol)
+        - Retrieving email messages
+        - Folder management and synchronization
+      - Protocol Summary Table
+        - Protocol, Description, Port, Use Case
+      - Conclusion
+        - Essential application protocols
+- Title: "SSL/TLS: The Technology Behind HTTPS"
+    Short Description: "Public/private keys, certificates, CAs, and secure sessions."
+    Synopsis: "Demystifies how SSL/TLS provides secure communications over the web. It walks through certificate chains, how HTTPS works, and common issues like expired certificates. Practical tips on checking and managing SSL for websites are included."
+    Tags: "ssl, tls, https, encryption, certificates"
+    Estimated Reading Time: "7 min"
+    Suggested Diagram/Image": "SSL/TLS handshake diagram"
+    Structure:
+      - Introduction
+        - The need for secure web communication
+        - SSL/TLS overview
+      - Encryption Basics
+        - Symmetric vs. asymmetric encryption
+        - Public and private keys
+      - SSL/TLS Handshake
+        - How a secure connection is established
+        - Certificate exchange
+        - Session keys
+        - Diagram of the handshake
+      - Certificates and CAs
+        - Digital certificates
+        - Certificate Authorities (CAs)
+        - Certificate chains of trust
+      - HTTPS
+        - How HTTPS uses SSL/TLS
+        - URL scheme and port 443
+      - Common Issues
+        - Expired certificates
+        - Certificate errors
+      - Conclusion
+        - Importance of SSL/TLS for web security
+        - Best practices for website SSL
+
+  - Title: "Firewalls: What They Are and Why You Need One"
+    Short Description: "Stateful vs stateless, rules, application-layer firewalls."
+    Synopsis: "Explains how firewalls protect networks by filtering traffic. Covers basic concepts like packet filtering, stateful inspection, and application-aware firewalls. Real examples from home and enterprise use cases provided."
+    Tags: "firewalls, security, packet filtering"
+    Estimated Reading Time: "6 min"
+    Suggested Diagram/Image": "Diagram of firewall rule application"
+    Structure:
+      - Introduction
+        - What is a firewall?
+        - Importance of firewalls in network security
+      - Basic Firewall Concepts
+        - Packet filtering
+        - Stateful vs. stateless firewalls
+        - Firewall rules and policies
+      - Firewall Types
+        - Network firewalls
+        - Host-based firewalls
+        - Hardware vs. software firewalls
+      - Advanced Firewall Features
+        - Application-layer firewalls
+        - Intrusion Prevention Systems (IPS)
+        - Network Address Translation (NAT) and firewalls
+      - Home and Enterprise Use Cases
+        - Home network firewall setup (e.g., Asus router)
+        - Enterprise firewall deployment
+      - Best Practices
+        - Rule management
+        - Logging and monitoring
+        - Regular updates
+      - Conclusion
+        - Essential role of firewalls in protecting networks
+
+  - Title: "Authentication, Authorisation, Accounting (AAA)"
+    Short Description: "Concepts and how they tie into enterprise Wi-Fi, RADIUS, VPNs."
+    Synopsis: "Clarifies the distinct but related concepts of AAA. Shows how they're implemented in enterprise and home environments, particularly with Wi-Fi networks, VPNs, and logging systems."
+    Tags: "aaa, radius, security, authentication"
+    Estimated Reading Time: "6 min"
+    Suggested Diagram/Image": "AAA concept flowchart"
+    Structure:
+      - Introduction
+        - What is AAA?
+        - Importance of AAA in network security
+      - Authentication
+        - Verifying user identity
+        - Methods (passwords, certificates, biometrics)
+      - Authorization
+        - Determining user privileges
+        - Access control lists (ACLs)
+        - Role-Based Access Control (RBAC)
+      - Accounting
+        - Tracking user activity
+        - Logging and auditing
+      - AAA Protocols
+        - RADIUS (Remote Authentication Dial-In User Service)
+        - TACACS+ (Terminal Access Controller Access-Control System Plus)
+      - AAA in Different Environments
+        - Enterprise Wi-Fi (802.1X)
+        - VPN authentication
+        - Network device access
+      - Conclusion
+        - The importance of AAA for secure access control
+
+  - Title: "Encryption Basics: Protecting Data in Transit and at Rest"
+    Short Description: "Symmetric/asymmetric examples, TLS, device encryption."
+    Synopsis: "Introduces the core principles of encryption, from symmetric key methods to public key infrastructure. Includes examples of when and where different types are used — from HTTPS to full-disk encryption."
+    Tags: "encryption, tls, symmetric, asymmetric"
+    Estimated Reading Time: "6 min"
+    Suggested Diagram/Image": "Comparison diagram of symmetric vs asymmetric encryption"
+    Structure:
+      - Introduction
+        - What is encryption?
+        - Importance of protecting data
+      - Symmetric Encryption
+        - Single key for encryption and decryption
+        - Examples (AES)
+        - Speed and efficiency
+        - Key distribution challenges
+      - Asymmetric Encryption
+        - Public and private key pairs
+        - Examples (RSA)
+        - Key exchange and digital signatures
+      - TLS (Transport Layer Security)
+        - Encryption in transit
+        - HTTPS and web security
+      - Encryption at Rest
+        - Full-disk encryption
+        - File encryption
+      - Practical Applications
+        - Securing communications
+        - Protecting stored data
+      - Conclusion
+        - Fundamental role of encryption in cybersecurity
+
+  - Title: "Virtual LANs (VLANs): Network Segmentation 101"
+    Short Description: "Isolating traffic, tagged vs untagged ports, home use on smart switches."
+    Synopsis: "Outlines how VLANs are used to logically segment networks without extra hardware. Explains tagging, trunk ports, and gives a practical home setup using managed switches."
+    Tags: "vlans, segmentation, switches, security"
+    Estimated Reading Time: "6 min"
+    Suggested Diagram/Image": "Diagram of VLAN tagging across switches"
+    Structure:
+      - Introduction
+        - What are VLANs?
+        - Why segment networks?
+      - VLAN Basics
+        - Logical separation of networks
+        - VLAN IDs and tagging
+        - Broadcast domains
+      - VLAN Types
+        - Port-based VLANs
+        - Tag-based VLANs
+      - VLAN Configuration
+        - Managed switches
+        - Trunk ports
+        - Access ports
+      - Home and Small Business Use Cases
+        - Guest networks
+        - IoT device isolation
+        - Network segmentation for security
+        - Example: Using VLANs on an Asus router
+      - Benefits of VLANs
+        - Security
+        - Performance
+        - Management
+      - Conclusion
+        - VLANs as a powerful tool for network organization
+
+  - Title: "VPNs: Secure Tunnels for Remote Access and Privacy"
+    Short Description: "Site-to-site vs remote access, pros/cons, basic setup concepts."
+    Synopsis: "Details how VPNs work and the differences between types. Practical uses in remote work, privacy, and securing IoT setups. Discusses key protocols like IPsec and OpenVPN."
+    Tags: "vpn, remote access, tunneling, privacy"
+    Estimated Reading Time: "7 min"
+    Suggested Diagram/Image": "VPN tunnel diagram"
+    Structure:
+      - Introduction
+        - What is a VPN?
+        - Why use a VPN? (Remote access, privacy)
+      - VPN Types
+        - Remote access VPNs
+        - Site-to-site VPNs
+      - VPN Technologies
+        - VPN protocols (IPsec, OpenVPN, WireGuard)
+        - Encryption and tunneling
+      - VPN Use Cases
+        - Remote work and access to company resources
+        - Protecting privacy online
+        - Securing home networks and IoT devices
+      - Setting up a VPN
+        - VPN servers and clients
+        - Router-based VPNs
+        - VPNs on NAS (e.g., Synology)
+      - VPN Considerations
+        - Performance
+        - Security
+        - Trust and provider selection
+      - Conclusion
+        - Benefits and importance of VPNs in modern networking
+
+  - Title: "How the Internet Actually Works (ISPs, IXPs, Routing)"
+    Short Description: "BGP simplified, peering agreements, traceroute visualisation."
+    Synopsis: "Describes the global architecture of the internet, including ISPs, peering points, and routing protocols like BGP. Explains how data traverses networks and what happens when it goes wrong."
+    Tags: "internet, bgp, isp, routing"
+    Estimated Reading Time: "7 min"
+    Suggested Diagram/Image": "Diagram of internet peering and BGP route flow"
+    Structure:
+      - Introduction
+        - The scale and complexity of the internet
+        - Key components
+      - ISPs (Internet Service Providers)
+        - Tiers of ISPs
+        - How ISPs connect users to the internet
+      - IXPs (Internet Exchange Points)
+        - Peering and transit
+        - Reducing latency and improving efficiency
+      - Routing
+        - How data packets travel across the internet
+        - Autonomous Systems (AS)
+        - BGP (Border Gateway Protocol)
+      - Traceroute
+        - Visualizing the path of data
+        - Troubleshooting network issues
+      - Internet Governance
+        - ICANN, IETF
+      - Conclusion
+        - The collaborative nature of the internet
+
+  - Title: "QoS: Prioritising Traffic for Smooth Performance"
+    Short Description: "VoIP, video calls, gaming — use DSCP and queueing concepts."
+    Synopsis: "Explains how Quality of Service works to prioritise critical network traffic. Covers DSCP tags, traffic shaping, and where it's useful (like VoIP or streaming)."
+    Tags: "qos, dscp, prioritisation, traffic"
+    Estimated Reading Time: "6 min"
+    Suggested Diagram/Image": "QoS traffic queue diagram"
+    Structure:
+      - Introduction
+        - What is QoS? (Quality of Service)
+        - Why is it important? (Real-time applications)
+      - QoS Mechanisms
+        - Prioritization
+        - Bandwidth allocation
+        - Traffic shaping
+        - Queuing
+      - DSCP (Differentiated Services Code Point)
+        - Marking traffic for priority
+        - DSCP values
+      - QoS Applications
+        - VoIP (Voice over IP)
+        - Video conferencing
+        - Online gaming
+        - Streaming media
+      - QoS Configuration
+        - Router settings
+        - Network devices
+      - QoS Challenges
+        - Complexity
+        - Over-provisioning vs. QoS
+      - Conclusion
+        - Benefits of implementing QoS for network performance
+
+  - Title: "Home Network Design: Tips from a Real Setup"
+    Short Description: "Your own home example: Asus router, VLANs, Pi-hole, Synology NAS, Home Assistant."
+    Synopsis: "Gives a real-world walkthrough of a modern home network with advanced features like VLANs, ad-blocking, and local DNS. Explains the rationale behind architecture choices and offers setup tips."
+    Tags: "home networking, setup, vlan, pi-hole, nas"
+    Estimated Reading Time: "7 min"
+    Suggested Diagram/Image": "Network diagram of user's home layout"
+    Structure:
+      - Introduction
+        - Importance of a well-designed home network
+        - Overview of my home network setup
+      - Network Components
+        - Asus BT8 router
+        - Synology 723+ NAS
+        - Raspberry Pi devices (Pi-hole, Home Assistant, etc.)
+      - Network Architecture
+        - VLANs for segmentation
+        - Wired and wireless setup
+        - Network diagram
+      - Key Services
+        - Pi-hole for ad-blocking
+        - Home Assistant for home automation
+        - Synology NAS for storage and services
+        - Docker and Portainer on the NAS
+        - Heimdall dashboard
+      - Setup and Configuration
+        - Router configuration
+        - VLAN setup
+        - Service integration
+      - Tips and Best Practices
+        - Security considerations
+        - Performance optimization
+        - Expansion and future-proofing
+      - Conclusion
+        - Benefits of a customized home network
+
+  - Title: "NAS: What It Is and Why You Might Want One"
+    Short Description: "Storage protocols (SMB/NFS), Plex, Time Machine backups."
+    Synopsis: "Describes what a NAS does and how it's useful in homes and small offices. Looks at common protocols, media streaming, and backup setups. Includes real deployment options and pitfalls."
+    Tags: "nas, smb, nfs, storage"
+    Estimated Reading Time: "6 min"
+    Suggested Diagram/Image": "NAS usage diagram"
+    Structure:
+      - Introduction
+        - What is a NAS (Network Attached Storage)?
+        - Benefits of a NAS
+      - NAS Functionality
+        - Centralized storage
+        - File sharing
+        - Media streaming
+        - Backup solutions
+      - Storage Protocols
+        - SMB (Server Message Block)
+        - NFS (Network File System)
+        - AFP (Apple Filing Protocol)
+      - NAS Use Cases
+        - Home media server (Plex)
+        - Time Machine backups
+        - Personal cloud storage
+        - Small office file sharing
+      - NAS Hardware and Configuration
+        - Drive configurations (RAID)
+        - Network connectivity
+        - NAS operating systems (e.g., Synology DSM)
+      - NAS Considerations
+        - Cost
+        - Performance
+        - Security
+      - Conclusion
+        - The versatility of NAS devices for storage and services
+
+  - Title: "IoT Networking: Smart Devices and Their Challenges"
+    Short Description: "Zigbee/Z-Wave vs Wi-Fi, MQTT, CoAP, IPv6, security risks."
+    Synopsis: "Looks at how IoT devices connect to networks and the challenges they pose. Covers constrained protocols like MQTT and CoAP, IPv6 implications, and best practices for securing IoT environments."
+    Tags: "iot, mqtt, coap, ipv6, smart home"
+    Estimated Reading Time: "7 min"
+    Suggested Diagram/Image": "Diagram of common IoT architecture and protocols"
+    Structure:
+      - Introduction
+        - What is IoT (Internet of Things)?
+        - Growth and impact of IoT devices
+      - IoT Connectivity
+        - Wi-Fi
+        - Zigbee and Z-Wave
+        - Cellular
+        - Other technologies (Bluetooth, LoRaWAN)
+      - IoT Protocols
+        - MQTT (Message Queuing Telemetry Transport)
+        - CoAP (Constrained Application Protocol)
+      - IPv6 and IoT
+        - Addressing the scalability of IoT
+        - IPv6 adoption
+      - IoT Security Challenges
+        - Vulnerabilities and attacks
+        - Privacy concerns
+        - Device management
+      - Securing IoT Networks
+        - Network segmentation (VLANs)
+        - Strong authentication
+        - Regular updates
+        - Example: Securing IoT devices on a Home Assistant network
+      - Conclusion
+        - Navigating the complexities of IoT networking
+
+  - Title: "ARP Spoofing, MAC Filtering and Network Fingerprinting"
+    Short Description: "Tighter dive into Layer 2 risks and what attackers do."
+    Synopsis: "Explores advanced Layer 2 attacks and how to defend against them. Discusses ARP spoofing, MAC address filtering, and passive network fingerprinting."
+    Tags: "security, arp spoofing, mac filtering"
+    Estimated Reading Time: "6 min"
+    Suggested Diagram/Image": "Diagram showing ARP spoof attack"
+    Structure:
+      - Introduction
+        - Layer 2 security threats
+        - Importance of understanding these risks
+      - ARP Spoofing (Detailed)
+        - How ARP spoofing works
+        - Consequences of ARP spoofing
+        - Detection and prevention techniques
+      - MAC Address Filtering
+        - How MAC filtering works
+        - Limitations and bypasses
+        - When MAC filtering might be useful
+      - Network Fingerprinting
+        - Passive vs. active fingerprinting
+        - Information that can be gathered
+        - Countermeasures
+      - Real-World Scenarios
+        - Attacks on local networks
+        - Security audits
+      - Conclusion
+        - Proactive Layer 2 security measures
+
+  - Title: "Using VLANs and Subnets for Smart Home Security"
+    Short Description: "IoT isolation, guest networks, firewall rules."
+    Synopsis: "Practical guide to using VLANs and subnetting to improve smart home network security. Offers real configuration tips, use cases, and security rationales."
+    Tags: "vlans, subnetting, home network, security"
+    Estimated Reading Time: "7 min"
+    Suggested Diagram/Image": "Smart home VLAN and subnet segmentation diagram"
+    Structure:
+      - Introduction
+        - Security challenges in smart home networks
+        - Importance of segmentation
+      - VLANs for Smart Home Security
+        - Isolating IoT devices
+        - Creating guest networks
+        - Segmenting cameras and other sensitive devices
+        - Example: VLAN configuration on an Asus router for a smart home
+      - Subnetting for Smart Home Security
+        - Further segmentation within VLANs
+        - IP address management
+        - Firewall rules and subnet-based policies
+      - Firewall Rules and Policies
+        - Allowing necessary traffic
+        - Blocking unnecessary communication
+        - Monitoring and logging
+      - Practical Configuration Examples
+        - VLAN setup on a managed switch
+        - Subnet configuration
+        - Firewall rules on a home router
+      - Security Rationale
+        - Defense in depth
+        - Reducing the attack surface
+        - Containing breaches
+      - Conclusion
+        - Enhancing smart home security through network segmentation
+
+- Title: "Running a Local DNS and DHCP Server for Your Home Lab"
+    Short Description: "Dnsmasq or Pi-hole as authoritative source, benefits of full control."
+    Synopsis: "Shows how and why to run your own DNS/DHCP for a home lab or advanced home setup. Explains the tools, benefits like faster lookups, and additional features like conditional forwarding."
+    Tags: "dns, dhcp, home lab, pi-hole"
+    Estimated Reading Time: "6 min"
+    Suggested Diagram/Image": "Local DNS + DHCP configuration diagram"
+    Structure:
+      - Introduction
+        - Benefits of running a local DNS and DHCP server
+        - Control, speed, and customization
+      - DNS and DHCP Basics
+        - Recap of DNS and DHCP functions
+        - Standard network configuration
+      - Tools for Local DNS and DHCP
+        - Dnsmasq
+        - Pi-hole (with DNS/DHCP features)
+      - Setup and Configuration
+        - Installing and configuring Dnsmasq or Pi-hole
+        - Configuring DHCP ranges and leases
+        - Setting up local DNS records
+      - Advanced Features
+        - Conditional forwarding
+        - DNS caching
+        - Local domain management
+      - Home Lab Examples
+        - Integrating with Docker containers
+        - Using with a Synology NAS
+        - Pi-hole on a Raspberry Pi (given your setup!)
+      - Troubleshooting
+        - Common issues and solutions
+      - Conclusion
+        - Empowering your home network with local DNS and DHCP
+
+  - Title: "Powering a Home Lab with Docker and Synology NAS"
+    Short Description: "Overview of running Docker on a NAS using Portainer and containerised apps."
+    Synopsis: "This post introduces Docker as the engine behind your modular, self-hosted infrastructure. It explains how to use Docker on a Synology NAS with Portainer as a GUI to manage containers. It also introduces your key use-cases: dashboards, observability, developer tools, and monitoring."
+    Tags: "docker, synology, portainer, containers, home lab"
+    Estimated Reading Time: "7 min"
+    Suggested Diagram/Image": "High-level architecture diagram of your NAS with Docker and grouped containers"
+    Structure:
+      - Introduction
+        - The power of Docker in a home lab
+        - Synology NAS as a platform (given your 723+!)
+      - Docker Basics
+        - Containers vs. VMs
+        - Docker images and repositories
+      - Docker on Synology NAS
+        - Installing Docker
+        - Configuring Docker settings
+      - Portainer
+        - Why use Portainer? (GUI management)
+        - Portainer setup and features
+      - Home Lab Use Cases
+        - Dashboards (Heimdall, Homarr, Flame)
+        - Observability and monitoring (cAdvisor, Glances, Uptime Kuma)
+        - Development tools (code-server)
+        - Network tools (Node-RED)
+      - Docker Compose
+        - Defining multi-container applications
+      - Best Practices
+        - Managing Docker data
+        - Security considerations
+        - Updates and maintenance (Watchtower!)
+      - Conclusion
+        - Unleashing the potential of Docker in your home lab
+
+  - Title: "Observability and Monitoring in a Home Network"
+    Short Description: "Explains how tools like cAdvisor, Glances, and Uptime Kuma give you visibility into your home lab."
+    Synopsis: "A practical guide on how to monitor your home network, device health, and internet uptime using Dockerised observability tools. Describes how each tool contributes to visibility: from container stats to uptime checks and speed tests."
+    Tags: "monitoring, observability, docker, home lab"
+    Estimated Reading Time: "6 min"
+    Suggested Diagram/Image": "Monitoring stack showing inputs (NAS, internet, services) and outputs (dashboards/alerts)"
+    Structure:
+      - Introduction
+        - Importance of observability and monitoring
+        - Keeping your home lab healthy
+      - Monitoring Goals
+        - Network health
+        - Device performance
+        - Service uptime
+        - Internet connectivity
+      - Observability Tools (Dockerized)
+        - cAdvisor (container stats)
+        - Glances (system resources)
+        - Uptime Kuma (uptime monitoring)
+        - Speedtest-cli (internet speed)
+        - Fing (Network scanning - given your Fing device!)
+      - Setup and Configuration
+        - Docker Compose for monitoring stack
+        - Configuring alerts and notifications
+      - Dashboards and Visualization
+        - Grafana (optional, for advanced dashboards)
+        - Displaying monitoring data (e.g., on Heimdall)
+      - Analyzing Monitoring Data
+        - Identifying bottlenecks
+        - Troubleshooting issues
+        - Capacity planning
+      - Best Practices
+        - Centralized logging
+        - Alert fatigue management
+        - Regular monitoring reviews
+      - Conclusion
+        - Maintaining a reliable home lab through effective monitoring
+
+  - Title: "Essential Dashboards for Home Labs: Heimdall, Homarr, Flame"
+    Short Description: "Launchpad-style dashboards to organise and control your services."
+    Synopsis: "Showcases dashboard and launchpad tools that provide clean, user-friendly frontends for managing services. Explains how they integrate with your containers, how to configure them, and their strengths."
+    Tags: "dashboard, ui, self-hosted, heimdall, flame, homarr"
+    Estimated Reading Time: "5 min"
+    Suggested Diagram/Image": "Screenshot montage of the dashboards"
+    Structure:
+      - Introduction
+        - The need for a central dashboard
+        - Organizing home lab services
+      - Dashboard Tools
+        - Heimdall (given you use this!)
+        - Homarr
+        - Flame
+      - Key Features
+        - Service listing
+        - Icon support
+        - Search functionality
+        - Customization
+        - Integration with Docker
+      - Setup and Configuration
+        - Docker Compose deployment
+        - Adding services
+        - Customizing appearance
+      - Comparison
+        - Strengths and weaknesses of each dashboard
+        - Choosing the right tool for your needs
+      - Use Cases
+        - Quick access to services
+        - Monitoring service status
+        - Sharing access with family members
+      - Conclusion
+        - Enhancing the home lab experience with dashboards
+
+  - Title: "Development and Documentation Tools in Containers"
+    Short Description: "Tools like code-server, wikidocs, and excalidraw in your NAS dev toolbox."
+    Synopsis: "Covers self-hosted developer productivity tools running in Docker. From editing code remotely to sketching diagrams and hosting a knowledge wiki, these tools provide a powerful dev environment right on your NAS."
+    Tags: "development, remote work, docker, code-server, documentation"
+    Estimated Reading Time: "7 min"
+    Suggested Diagram/Image": "Workflow chart from code > diagram > doc > deploy"
+    Structure:
+      - Introduction
+        - Self-hosting development tools
+        - Benefits of Docker for development
+      - Development Tools
+        - code-server (VS Code in the browser)
+        - Gitpod (brief mention as alternative)
+      - Documentation Tools
+        - Wiki.js or MediaWiki (for a wiki)
+        - Excalidraw (for diagrams - aligns with your interest!)
+        - Draw.io (brief mention)
+      - Setup and Configuration
+        - Docker Compose deployment
+        - Persistence and data management
+      - Workflow Integration
+        - Code > Diagram > Documentation > Deployment
+        - Connecting to your NAS
+      - Use Cases
+        - Remote development
+        - Collaborative documentation
+        - Knowledge sharing
+      - Best Practices
+        - Security
+        - Backups
+        - Updates
+      - Conclusion
+        - Empowering developers with self-hosted tools
+
+  - Title: "Network Tools and Automation in Docker"
+    Short Description: "Includes node-red, reubah, ipsnap, and structurizr."
+    Synopsis: "Highlights how to automate your smart home, document architectures, and track IP/network changes using Dockerised tools. Great for tinkerers, home automation fans, and tech organisers."
+    Tags: "automation, iot, network tools, node-red, structurizr"
+    Estimated Reading Time: "6 min"
+    Suggested Diagram/Image": "Flowchart showing Node-RED and network monitoring interactions"
+    Structure:
+      - Introduction
+        - Enhancing network management with Docker
+        - Automation and documentation
+      - Network Automation
+        - Node-RED (visual flow-based programming - aligns with automation!)
+        - Home Assistant integration (given your setup!)
+      - Network Documentation
+        - Structurizr (C4 model diagrams - given your interest!)
+        - Archi (brief mention for ArchiMate)
+      - Network Monitoring
+        - IP Snap (IP change tracking)
+        - Rejex (Log analysis)
+      - Setup and Configuration
+        - Docker Compose deployment
+        - Connecting tools together
+      - Use Cases
+        - Smart home automation flows
+        - Network architecture diagrams
+        - Change management
+      - Best Practices
+        - Security
+        - Version control for flows/diagrams
+        - Documentation
+      - Conclusion
+        - Automating and documenting your network effectively
+
+  - Title: "Keeping Docker in Check with Watchtower"
+    Short Description: "How Watchtower keeps your containers up to date automatically."
+    Synopsis: "Shows how Watchtower automatically updates your containers, the pros and cons of automated updates, and when to pin versions. It’s your CI-lite in a home lab."
+    Tags: "watchtower, docker updates, automation"
+    Estimated Reading Time: "4 min"
+    Suggested Diagram/Image": "Update flow showing container, DockerHub, Watchtower"
+    Structure:
+      - Introduction
+        - Importance of keeping containers updated
+        - Automation vs. manual updates
+      - Watchtower
+        - How Watchtower works
+        - Automatic updates
+        - Configuration options
+      - Pros of Automatic Updates
+        - Security patches
+        - New features
+        - Bug fixes
+      - Cons of Automatic Updates
+        - Breaking changes
+        - Instability
+        - Lack of control
+      - Version Pinning
+        - When to pin container versions
+        - Managing dependencies
+      - Best Practices
+        - Testing updates
+        - Backups
+        - Monitoring
+      - Conclusion
+        - Balancing automation and control in Docker updates
