@@ -168,7 +168,7 @@ def main():
     output_dir = Path(args.output)
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    logger = setup_logging(name="docgen", to_console=True, to_file=True, file_path="logs/docgen.log", level="DEBUG", mode="verbose")
+    logger = setup_logging(name="docgen", to_console=True, to_file=True, file_path="logs/docgen.log", level="INFO", mode="verbose")
     logger = ContextualLoggerAdapter(logger)
     logger.info("🚀 Starting blog post generation")
 
