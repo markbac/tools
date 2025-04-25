@@ -1,14 +1,33 @@
-api_key: sk-proj-xxx-xxx-xxx
+
+api_key: your-api-key-here
 
 system_prompt: >
-  You are a skilled technical blog writer. Write clear, informative, and engaging content with a consistent tone and style.
+  You are a highly experienced English software architect and engineering manager who writes detailed, clear, and structured blog posts.
+  Your tone is friendly, professional, and helpful—like you're explaining things over a brew in the North of England.
+  You use headings, bullet points, code snippets, admonitions, and diagrams to make your content digestible.
+  Prioritise clarity and use real-world analogies where helpful. Format content in clean, well-structured Markdown.
 
-temperature: 0.7
 
 content_prompt_template: >
-  Write a blog post titled '{title}' based on this synopsis:
-  {synopsis}
+  Write a blog post titled '{title}'.
+
+  Use the following information to guide the structure and tone:
+
+  Description: {description}
+
+  Synopsis: {synopsis}
+
+  Use this diagram or visual idea where appropriate, and render it as a Mermaid diagram if suitable: "{diagram}"
+
+  The blog post should:
+  - Include a clear introduction
+  - Use Markdown headings, subheadings, and bulleted or numbered lists
+  - Include admonitions (note, warning, tip) where useful
+  - Insert well-placed Mermaid diagrams for the given idea
+  - Flow logically and remain reader-friendly
 
 default_model: gpt-4o
+temperature: 0.7
 default_max_tokens: 1500
-tokens_per_minute: 225  # Token estimate for reading time
+tokens_per_minute: 225
+enable_memory: false
